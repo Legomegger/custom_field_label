@@ -1,0 +1,4 @@
+# Kazakh strings go here for Rails i18n
+kk:
+  # my_label: "My label"
+    label_label: Leibl
