@@ -1,3 +1,6 @@
-= redmine_custom_field_label
+= Redmine Custom Field Label Plugin
+This plugin adds a new custom field type: Label
 
-Description goes here
+Install: Download contents, add directory into /plugins/redmine_custom_field_label, restart your application.
+
+Please feel free to add, edit to this repository
