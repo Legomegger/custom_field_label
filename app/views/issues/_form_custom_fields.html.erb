@@ -3,23 +3,23 @@
 <% custom_field_values -= custom_field_values_full_width %>
 
 <% if custom_field_values.present? %>
-<div class="splitcontent">
-<div class="splitcontentleft">
-<% i = 0 %>
-<% split_on = (custom_field_values.size / 2.0).ceil - 1 %>
-<% custom_field_values.each do |value| %>
+  <div class="splitcontent">
+    <div class="splitcontentleft">
+      <% i = 0 %>
+      <% split_on = (custom_field_values.size / 2.0).ceil - 1 %>
+      <% custom_field_values.each do |value| %>
         <% if value.custom_field.field_format == 'label'%>
-            <p><%= custom_field_name_tag_bold(value.custom_field) %></p>
-            <% else %>
-            <p><%= custom_field_tag_with_label :issue, value, :required => @issue.required_attribute?(value.custom_field_id) %></p>
-            <% end %>
-<% if i == split_on -%>
-</div><div class="splitcontentright">
-<% end -%>
-<% i += 1 -%>
-<% end -%>
-</div>
-</div>
+          <p><%= custom_field_name_tag_bold(value.custom_field) %></p>
+        <% else %>
+          <p><%= custom_field_tag_with_label :issue, value, :required => @issue.required_attribute?(value.custom_field_id) %></p>
+        <% end %>
+        <% if i == split_on -%>
+      </div><div class="splitcontentright">
+      <% end -%>
+      <% i += 1 -%>
+    <% end -%>
+      </div>
+  </div>
 <% end %>
 
 <% custom_field_values_full_width.each do |value| %>

@@ -17,10 +17,10 @@ module RedmineCustomFieldLabel
             m = (i < half ? :left : :right)
             if value.custom_field.field_format == 'label'
               rows.send m, custom_field_name_tag_bold(value.custom_field),
-                        attr_value, class: css
+                attr_value, class: css
             else
               rows.send m, custom_field_name_tag(value.custom_field),
-                        attr_value, class: css
+                attr_value, class: css
             end
           end
         end
